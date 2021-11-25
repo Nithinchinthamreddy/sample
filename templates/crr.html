@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Crop recommendation
+        </title>
+        <style>
+          .nithin{
+                background-color:goldenrod;
+                overflow: hidden;
+                height: 40px;
+                text-align-last: right;
+            }
+            .nithin a{
+                color: darkgreen;
+                font-size: 20px;
+                font-style: italic;
+                padding: 30px 30px;
+                text-align: center;
+                text-decoration: none;
+               
+                
+            }
+            .nithin a:hover{
+                background-color:black;
+                color:white;
+            
+            }
+            .b_f{
+                background-color:mediumseagreen;
+                background-repeat: no-repeat;
+                background-size: cover;
+                font-size: 35px;
+                color: maroon;
+            }
+    </style>
+    </head>
+    <body>
+        <body style="background-color: skyblue;">
+            <div class="nithin">
+                <a class="active" href="/home">Home</a>
+                <a href="/predict">prediction</a>
+                <a href="events.html">Register as a farmer</a>
+                <a href="booking.html">Register as a customer</a>
+                <a href="signup.html">Farmer login</a>
+                <a href="login.html">customer Login</a>
+            </div>
+            <div style="height: 10px;"></div>
+            <center>
+                <form action="{{ url_for('submit')}}" method="POST" class="b_f">
+                    <table>
+                        <tr>
+                            <td>Nitrogen:</td>
+                            <td><input type="text" name="crr_n"required></td>
+                        </tr>
+                        <div style="height: 20px;"></div>
+                        <tr>
+                            <td>Phosphorus:</td>
+                            <td><input type="text" name="crr_p"required ></td>
+                        </tr>
+                        <div style="height: 20px;"></div>
+                        <tr>
+                            <td>Potassium:</td>
+                            <td><input type="text" name="crr_k" required></td>
+                        </tr>
+                        <div style="height: 20px;"></div>
+                        <tr>
+                            <td>Temparature:</td>
+                            <td><input type="text" name="crr_temp" required></td>
+                        </tr>
+                        <div style="height: 20px;"></div>
+                        <tr>
+                            <td>Humidity:</td>
+                            <td><input type="text" name="crr_hum" required></td>
+                        </tr>
+                        <div style="height: 20px;"></div>
+                        <tr>
+                            <td>PH:</td>
+                            <td><input type="text" name="crr_ph" required></td>
+                        </tr>
+                        <tr>
+                            <td>Rainfall:</td>
+                            <td><input type="text" name="crr_rain" required></td>
+                        </tr>
+                                   
+                        <tr>
+                            <td colspan="2"><button type="submit" style="font-size: 25px; background-color: red; color: white;">submit</button></td>
+                        </tr>
+                       
+                      
+                    </table>
+                </form>
+            </center>
+            <center>
+                <h2 style="color: red;">
+                    {{ optext1 }}
+                </h2>
+            </center>
+    </body>
+</html>

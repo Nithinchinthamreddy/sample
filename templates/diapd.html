@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            diabeties
+    
+        </title>
+        <style>
+          .nithin{
+                background-color:goldenrod;
+                overflow: hidden;
+                height: 40px;
+                text-align-last: right;
+            }
+            .nithin a{
+                color: darkgreen;
+                font-size: 20px;
+                font-style: italic;
+                padding: 30px 30px;
+                text-align: center;
+                text-decoration: none;
+               
+                
+            }
+            .nithin a:hover{
+                background-color:black;
+                color:white;
+            
+            }
+            .b_f{
+                background-color:mediumseagreen;
+                background-repeat: no-repeat;
+                background-size: cover;
+                font-size: 35px;
+                color: maroon;
+            }
+    </style>
+    </head>
+    <body>
+        <body style="background-color: skyblue;">
+            <div class="nithin">
+                <a class="active" href="/">Home</a>
+                
+            </div>
+            
+            <div style="height: 10px;"></div>
+            <center>
+                <form action="{{ url_for('submit')}}" method="POST" class="b_f">
+                    <table>
+                        <tr>
+                            <td>Pregnencies:</td>
+                            <td><input type="text" name="crr_n"required></td>
+                        </tr>
+                        <div style="height: 20px;"></div>
+                        <tr>
+                            <td>Glucose:</td>
+                            <td><input type="text" name="crr_p"required ></td>
+                        </tr>
+                        <div style="height: 20px;"></div>
+                        <tr>
+                            <td>BloodPressure:</td>
+                            <td><input type="text" name="crr_k" required></td>
+                        </tr>
+                        <div style="height: 20px;"></div>
+                        <tr>
+                            <td>SkinThickness:</td>
+                            <td><input type="text" name="crr_temp" required></td>
+                        </tr>
+                        <div style="height: 20px;"></div>
+                        <tr>
+                            <td>Insulin:</td>
+                            <td><input type="text" name="crr_hum" required></td>
+                        </tr>
+                        <div style="height: 20px;"></div>
+                        <tr>
+                            <td>BMI:</td>
+                            <td><input type="text" name="crr_ph" required></td>
+                        </tr>
+                        <tr>
+                            <td>DiabetesPedigreeFunction:</td>
+                            <td><input type="text" name="crr_rain" required></td>
+                        </tr>
+                        <tr>
+                            <td>Age:</td>
+                            <td><input type="text" name="crr_rai" required></td>
+                        </tr>
+                                   
+                        <tr>
+                            <td colspan="2"><button type="submit" style="font-size: 25px; background-color: red; color: white;">submit</button></td>
+                        </tr>
+                       
+                      
+                    </table>
+                </form>
+            </center>
+            <center>
+                <h2>
+                    {{ optext1 }}
+                </h2>
+            </center>
+    </body>
+</html>
